@@ -19,8 +19,8 @@
 <details>
     <summary>Socials</summary>
 
-- [Github]
-- [LinkedIn]
+- [Github](https://github.com/bojeebs)
+- [LinkedIn](https://www.linkedin.com/in/carter-tyler/)
 
 </details>
 
