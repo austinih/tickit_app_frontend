@@ -9,6 +9,7 @@ export default function Nav() {
            <Link to="/venues">
                 Venues
            </Link>
+           <Link to="/tickets">Tickets</Link>
         </div>
         
     )
