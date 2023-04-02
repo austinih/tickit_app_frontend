@@ -1,0 +1,8 @@
+.footer-container {
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 4rem;
+  }
