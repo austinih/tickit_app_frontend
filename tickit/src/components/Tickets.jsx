@@ -13,24 +13,31 @@ export default function Tickets() {
         setFormValues({...formValues, [e.target.name]: e.target.value})
     }
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault()
-    //     try {
-    //         const response = await axios.post("API Endpoint here", formValues)
-    //         const data = response.data
-    //         setFormValues(data)
-    //         setFormValues({name: '', email: '', phone_number: ''})
-    //     } catch(error) {
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        try {
+            const response = await axios.post('/api/create-ticket-detail/',
+            {
+              name:formValues.name,
+              email:formValues.email,
+              phone_number: formValues.phone_number,
+              credit_card_number: formValues.credit_card_number,
+              seat_number: formValues.seat_number         
+            })
+            const data = response.data
+            setFormValues(data)
+            setFormValues({name: '', email: '', phone_number: ''})
+        } catch(error) {
 
-    //     }
-    // }
+        }
+    }
 
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setFormValues(formValues);
-        setFormValues({ name: '', email: '', phone_number: '' });
-      }
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     setFormValues(formValues);
+    //     setFormValues({ name: '', email: '', phone_number: '' });
+    //   }
 
 
 
