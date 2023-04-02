@@ -1,4 +1,6 @@
 import Nav from "./Nav"
+import '../styles/header.css'
+
 
 export default function Header() {
     return(

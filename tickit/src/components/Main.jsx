@@ -29,7 +29,7 @@ useEffect(() => {
 
 
     return(
-        <div>
+        <div className="main-container">
             <h2>{venue.name}</h2>
             <h3>Home Page</h3>
         </div>

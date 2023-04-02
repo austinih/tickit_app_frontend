@@ -1,1 +1,17 @@
+/* Material Theme */
+@import url(./styles/css/tokens.css);
+@import url(./styles/css/colors.module.css);
+@import url(./styles/css/typography.module.css);
+@import url(./styles/css/theme.light.css) (prefers-color-scheme: light);
+@import url(./styles/css/theme.dark.css) (prefers-color-scheme: dark);
+/* Material Theme */
 
+main {
+        background-color: var(--md-sys-color-background);
+        color: var(--md-sys-color-on-background);
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4rem;
+}
