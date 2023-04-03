@@ -25,8 +25,8 @@ function App() {
             <Route path="/venues/:venueId" element={<VenueDetails />} />
             <Route path="/tickets/" element={<Tickets />} />
             {/* Add back :eventId after testing^ */}
-            <Route path="/confirmation/:ticketId" element={<Confirmation />} />
-
+            <Route path="/confirmation/" element={<Confirmation />} />
+            {/* Add back :eventId after testing^ */}
 
           </Routes>
         </div>
