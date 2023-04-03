@@ -12,7 +12,7 @@ const [venue, setVenue] = useState({})
 
 useEffect(() => {
     const renderVenues = async () => {
-      const response = await axios.get(`http://localhost:8000/venues/1`);
+      const response = await axios.get(`http://localhost:8000/`);
       setVenue(response.data);
       console.log(response.data)
     };

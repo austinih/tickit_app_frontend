@@ -1,98 +1,149 @@
-import { useState, useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
-import axios from "axios";
+import { useState } from 'react'
+// import { useNavigate } from 'react-router-dom';
+import axios from 'axios'
 import '../styles/tickets.css'
 
+
 export default function Tickets() {
+  // let navigate = useNavigate();
 
-    let navigate = useNavigate()
+  
 
-    const [formValues, setFormValues] = useState({name: '', email: '', phone_number: ''})
-
-    const handleChange = (e) => {
-        setFormValues({...formValues, [e.target.name]: e.target.value})
-    }
-
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        try {
-            const response = await axios.post('/api/create-ticket-detail/',
-            {
-              name:formValues.name,
-              email:formValues.email,
-              phone_number: formValues.phone_number,
-              credit_card_number: formValues.credit_card_number,
-              seat_number: formValues.seat_number         
-            })
-            const data = response.data
-            setFormValues(data)
-            setFormValues({name: '', email: '', phone_number: ''})
-        } catch(error) {
-
-        }
-    }
+  
+  
+  const [createForm, setCreateForm] = useState([])
+  const [formValues, setFormValues] = useState({
+    event_id: '1',
+    name: '',
+    email: '',
+    phone_number: '',
+    seat_number: '',
+    credit_card_number: '',
+    
+    
+  });
 
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     setFormValues(formValues);
-    //     setFormValues({ name: '', email: '', phone_number: '' });
-    //   }
+  const handleChange = (e) => {
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  };
 
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    console.log(formValues)
+    const response = await axios.post(`http://localhost:8000/create-ticket-detail/`, formValues)
+    console.log(response.data)
+    setCreateForm(response.data)
+  }
 
+  
 
-
-
-    return(
-        <div>
-           <h1>Tickets Page</h1>     
-           <div className="form-container">
-  <div className="card">
-    <form className="form" onSubmit={handleSubmit}>
-      <div className="input-wrapper">
-        <label className="label" htmlFor="username">Name</label>
-        <input
-          className='input-field'
-          onChange={handleChange}
-          name="name"
-          type="username"
-          placeholder="Name"
-          value={formValues.name}
-          required
-        />
+return (
+  <div>
+    <h1>Tickets Page</h1>
+    <div className="form-container">
+      <div className="card">
+        <form className="form" onSubmit={handleSubmit}>
+          <div className="input-wrapper">
+          </div>
+          <div className="input-wrapper">
+            <label className="label" htmlFor="name">
+              Name
+            </label>
+            <input
+              className="input-field"
+              onChange={handleChange}
+              name="name"
+              type="text"
+              placeholder="Name"
+              value={formValues.name}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label className="label" htmlFor="email">
+              Email
+            </label>
+            <input
+              className="input-field"
+              onChange={handleChange}
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formValues.email}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label className="label" htmlFor="phone_number">
+              Phone Number
+            </label>
+            <input
+              className="input-field"
+              onChange={handleChange}
+              type="tel"
+              name="phone_number"
+              placeholder="Phone Number"
+              value={formValues.phone_number}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label className="label" htmlFor="credit_card_number">
+              Credit Card Number
+            </label>
+            <input
+              className="input-field"
+              onChange={handleChange}
+              type="text"
+              name="credit_card_number"
+              placeholder="Credit Card Number"
+              value={formValues.credit_card_number}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label className="label" htmlFor="seat_number">
+              Seat Number
+            </label>
+            <input
+              className="input-field"
+              onChange={handleChange}
+              type="text"
+              name="seat_number"
+              placeholder="Seat Number"
+              value={formValues.seat_number}
+              required
+            />
+          </div>
+          <button className="submit-btn">
+  Submit
+</button>
+        </form>
+        {createForm && (
+          <div>
+            <h2>{createForm.event}</h2>
+            <p>{createForm.name}</p>
+            <p>{createForm.email}</p>
+            <p>{createForm.phone_number}</p>
+            <p>{createForm.seat_number}</p>
+            <p>{createForm.credit_card_number}</p>
+          </div>
+        )}
       </div>
-      <div className="input-wrapper">
-        <label className='label' htmlFor="email">Email</label>
-        <input
-          className='input-field'
-          onChange={handleChange}
-          type="email"
-          name="email"
-          placeholder='Email'
-          value={formValues.email}
-          required
-        />
-      </div>
-      <div className="input-wrapper">
-        <label className='label' htmlFor="phone_number">Phone Number</label>
-        <input
-          className='input-field'
-          onChange={handleChange}
-          type="phone_number"
-          name="phone_number"
-          placeholder='Phone Number'
-          value={formValues.phone_number}
-          required
-        />
-      </div>
-      <button className='submit-btn' disabled={formValues.username === '' || !formValues.password === '' || formValues.phone_number === ''}>
-        Submit
-      </button>
-    </form>
+    </div>
   </div>
-</div>
-
-</div>
-)
+);
 }
+
+
+
+
+
+
+
+
+
+
+
