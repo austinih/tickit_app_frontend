@@ -5,8 +5,8 @@
 }
     
 .event-card {
-    background-color: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
     
     padding: 1rem;
     display: flex;
