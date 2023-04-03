@@ -47,7 +47,9 @@ useEffect(() => {
   ConfirmInfo();
 }, [])
 
-return (
+
+
+return concertData[0] ? (
   
   <div className= "venue-info">
     <h1>Tickets Page</h1>
@@ -167,7 +169,8 @@ return (
       </div>
     </div>
   </div>
-);
+) : <h1> Loading, please wait</h1>
+
 }
 
 
