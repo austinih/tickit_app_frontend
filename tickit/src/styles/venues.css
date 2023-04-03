@@ -1,0 +1,27 @@
+.venue-list{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.venue-card {
+background-color: var(--md-sys-color-tertiary-container);
+color: var(--md-sys-color-on-tertiary-container);
+min-height: 200px;
+padding: 1rem;
+display: flex;
+margin: 0 2rem 2rem 2rem;
+flex-direction: column;
+justify-content: space-between;
+border-radius: 1rem;
+-webkit-border-radius: 1rem;
+-moz-border-radius: 1rem;
+-ms-border-radius: 1rem;
+-o-border-radius: 1rem;
+
+}
+
+.venue-image {
+    width: 35vw;
+    height: 20vw;
+}
