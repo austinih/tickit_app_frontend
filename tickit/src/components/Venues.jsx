@@ -27,10 +27,10 @@ export default function Venues() {
         <div className="venue-list">
             
             {venues.map((venue) => (
-                <div className="venue-card">
+                <div className="venue-card" style={{backgroundImage:`url('${venue.image_url}')`}}>
                     <h2 className="venue-name">{venue.name}</h2> 
                     <p className="venue-address">{venue.address}</p>
-                    <img className="venue-image" src={venue.image_url} alt='Venue Image' />
+                    {/* <img className="venue-image" src={venue.image_url} alt='Venue Image' /> */}
                                         
                 </div>
                 ))}
