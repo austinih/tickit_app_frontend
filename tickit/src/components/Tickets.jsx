@@ -5,24 +5,10 @@ import '../styles/tickets.css'
 
 
 export default function Tickets() {
-  // let navigate = useNavigate();
 
-  
+    let navigate = useNavigate()
 
-  
-  
-  const [createForm, setCreateForm] = useState([])
-  const [formValues, setFormValues] = useState({
-    event_id: '1',
-    name: '',
-    email: '',
-    phone_number: '',
-    seat_number: '',
-    credit_card_number: '',
-    
-    
-  });
-
+    const [formValues, setFormValues] = useState({name: '', email: '', phone_number: ''})
 
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
