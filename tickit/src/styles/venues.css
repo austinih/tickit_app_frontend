@@ -12,19 +12,9 @@ padding: 1rem;
 display: flex;
 margin: 0 2rem 2rem 2rem;
 flex-direction: column;
-
 border-radius: 1rem;
-/* -webkit-border-radius: 1rem;
--moz-border-radius: 1rem;
--ms-border-radius: 1rem;
--o-border-radius: 1rem; */
-object-fit: cover; 
+/* object-fit: cover; 
 max-height: 100%;
-max-width: 80%;
+max-width: 80%; */
 
-}
-
-.venue-image {
-    width: 35vw;
-    height: 20vw;
 }
