@@ -37,7 +37,7 @@ export default function Tickets() {
   }
 
   const ConfirmInfo = async () => {
-    const response = await axios.get(`http://localhost:8000`)
+    const response = await axios.get(`http://localhost:8000/venues`)
     console.log(response.data, "line 42")
     setConcertData(response.data)
     console.log(response.data, "line 44")
