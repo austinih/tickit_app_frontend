@@ -1,14 +1,27 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import '../styles/tickets.css'
 
 
 export default function Tickets() {
+  // let navigate = useNavigate();
 
-    let navigate = useNavigate()
+  
 
-    const [formValues, setFormValues] = useState({name: '', email: '', phone_number: ''})
+
+  const [createForm, setCreateForm] = useState([])
+  const [formValues, setFormValues] = useState({
+    event_id: '1',
+    name: '',
+    email: '',
+    phone_number: '',
+    seat_number: '',
+    credit_card_number: '',
+    
+    
+  });
+
 
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
@@ -122,9 +135,6 @@ return (
   </div>
 );
 }
-
-
-
 
 
 
