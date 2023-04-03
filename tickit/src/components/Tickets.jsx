@@ -1,11 +1,11 @@
 import { useState } from 'react'
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import '../styles/tickets.css'
 
 
 export default function Tickets() {
-  // let navigate = useNavigate();
+  let navigate = useNavigate();
 
   
 
