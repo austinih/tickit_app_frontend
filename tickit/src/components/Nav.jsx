@@ -12,6 +12,7 @@ export default function Nav() {
                 Venues
            </Link>
            <Link to="/tickets">Tickets</Link>
+           <Link to="/confirmation">Confirmation</Link>
         </div>
         
     )

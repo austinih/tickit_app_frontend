@@ -42,3 +42,25 @@
 .input-wrapper {
   margin-right: 15px; 
 }
+
+p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.venue-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
