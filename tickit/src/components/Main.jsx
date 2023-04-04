@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import '../styles/main.css';
+import { Link } from "react-router-dom";
 
 export default function Main() {
   const [events, setEvents] = useState([]);
@@ -46,6 +47,7 @@ export default function Main() {
   return (
     <div className="event-list">
       {filteredEvents.map((event) => (
+        <Link to={`/tickets/${event.id}`} key={events.id}>
         <div
           key={event.id}
           className="event-card"
@@ -56,6 +58,7 @@ export default function Main() {
           <p className="event-genre">{event.genre}</p>
           <p className="event-date">{event.date}</p>
         </div>
+        </Link>
       ))}
       <div className="search-box">
         <input
@@ -71,5 +74,6 @@ export default function Main() {
         </button>
       </div>
     </div>
+    
   );
 }
