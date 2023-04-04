@@ -46,12 +46,3 @@ export default function VenueDetails() {
     )
 }
 
-  // useEffect(() => {
-    //     const renderVenue = async () => {
-    //       const response = await axios.get(`http://localhost:8000/venues/${id}`);
-    //       setVenues(response.data);
-    //       console.log(response.data)
-        
-    //     };
-    //     renderVenue()
-    // }, [])
