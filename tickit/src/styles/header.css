@@ -13,3 +13,7 @@
   text-decoration: none;
   color: var(--md-sys-color-on-primary);
 }
+
+.nav-link {
+  font: 25px;
+}
