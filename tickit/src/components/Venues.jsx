@@ -5,6 +5,7 @@ import '../styles/venues.css'
 import { Link } from "react-router-dom";
 
 
+
 export default function Venues() {
     
     let navigate = useNavigate()
@@ -20,7 +21,7 @@ export default function Venues() {
         renderVenues()
     }, [])
     
-   
+    
     if (!venues) {
         return <h1> loading please wait</h1>
         
@@ -33,10 +34,8 @@ export default function Venues() {
             {venues.map((venue) => (
                 <Link to={`/venues/${venue.id}`} key={venue.id}>
                     <div className="venue-card" style={{backgroundImage:`url('${venue.image_url}')` }} >
-                        <div className="img-caption">
-                        <h2>{venue.name}</h2> 
-                        <p>{venue.address}</p>    
-                        </div>                  
+                        <h2 className="venue-name">{venue.name}</h2> 
+                        <p className="venue-address">{venue.address}</p>                      
                     </div>
                 </Link>
                 ))}
