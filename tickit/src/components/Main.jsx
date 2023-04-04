@@ -45,21 +45,7 @@ export default function Main() {
   }
 
   return (
-    <div className="event-list">
-      {filteredEvents.map((event) => (
-        <Link to={`/tickets/${event.id}`} key={events.id}>
-        <div
-          key={event.id}
-          className="event-card"
-          style={{ backgroundImage: `url('${event.image_url}')` }}
-        >
-          <h2 className="event-title">{event.title}</h2>
-          <p className="event-artist">{event.artist}</p>
-          <p className="event-genre">{event.genre}</p>
-          <p className="event-date">{event.date}</p>
-        </div>
-        </Link>
-      ))}
+    <div>
       <div className="search-box">
         <input
           type="text"
@@ -68,12 +54,27 @@ export default function Main() {
           value={search.formInput}
           onChange={handleChange}
         />
-
         <button type="button" onClick={handleSubmit}>
           Search
         </button>
       </div>
+    <div className="event-list">
+      
+      {filteredEvents.map((event) => (
+        <Link className="main-link" to={`/tickets/${event.id}`} key={events.id}>
+        <div
+          key={event.id}
+          className="event-card"
+          style={{ backgroundImage: `url('${event.image_url}')` }}>
+          <div className="img-caption">
+          <p className="event-artist">{event.artist}</p>
+          <p className="event-date">{event.date}</p>
+          </div>
+        </div>
+        </Link>
+      ))}
+      
     </div>
-    
+    </div>
   );
 }
