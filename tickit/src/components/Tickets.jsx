@@ -5,10 +5,10 @@ import '../styles/tickets.css'
 import Confirmation from './Confirmation'
 
 
+
+
 export default function Tickets() {
  
-
-  
 
   const [concertData, setConcertData] = useState({})
   const [createForm, setCreateForm] = useState([])
@@ -46,7 +46,7 @@ export default function Tickets() {
 useEffect(() => {
   ConfirmInfo();
 }, [])
-
+ 
 
 
 return concertData[0] ? (
