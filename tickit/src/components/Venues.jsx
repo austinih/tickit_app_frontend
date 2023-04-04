@@ -21,10 +21,7 @@ export default function Venues() {
         renderVenues()
     }, [])
     
-    const showVenue = (id) => {
-        navigate(`${id}`)
-    }
-
+    
     if (!venues) {
         return <h1> loading please wait</h1>
         
@@ -36,7 +33,7 @@ export default function Venues() {
             
             {venues.map((venue) => (
                 <Link to={`/venues/${venue.id}`} key={venue.id}>
-                    <div className="venue-card" style={{backgroundImage:`url('${venue.image_url}')` }} onClick={() => showVenue(venue.id) }>
+                    <div className="venue-card" style={{backgroundImage:`url('${venue.image_url}')` }} >
                         <h2 className="venue-name">{venue.name}</h2> 
                         <p className="venue-address">{venue.address}</p>                      
                     </div>
