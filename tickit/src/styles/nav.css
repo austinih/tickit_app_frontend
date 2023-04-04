@@ -4,9 +4,10 @@
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+    padding: 2rem 4rem;
 }
 
-.nav-bar a:link {
+.link {
     text-decoration: none;
-    color: var(--md-sys-color-on-surface-variant);
-}
+    color: var(--md-sys-color-on-primary);
+  }

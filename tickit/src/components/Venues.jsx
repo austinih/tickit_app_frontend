@@ -1,10 +1,14 @@
 import { useEffect, useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import '../styles/venues.css'
+import { Link } from "react-router-dom";
+
 
 
 export default function Venues() {
     
+    let navigate = useNavigate()
     const [venues, setVenues] = useState([])
 
     useEffect(() => {
@@ -17,6 +21,10 @@ export default function Venues() {
         renderVenues()
     }, [])
     
+    const showVenue = (id) => {
+        navigate(`${id}`)
+    }
+
     if (!venues) {
         return <h1> loading please wait</h1>
         
@@ -27,12 +35,12 @@ export default function Venues() {
         <div className="venue-list">
             
             {venues.map((venue) => (
-                <div className="venue-card" style={{backgroundImage:`url('${venue.image_url}')`}}>
-                    <h2 className="venue-name">{venue.name}</h2> 
-                    <p className="venue-address">{venue.address}</p>
-                    {/* <img className="venue-image" src={venue.image_url} alt='Venue Image' /> */}
-                                        
-                </div>
+                <Link to={`/venues/${venue.id}`} key={venue.id}>
+                    <div className="venue-card" style={{backgroundImage:`url('${venue.image_url}')` }} onClick={() => showVenue(venue.id) }>
+                        <h2 className="venue-name">{venue.name}</h2> 
+                        <p className="venue-address">{venue.address}</p>                      
+                    </div>
+                </Link>
                 ))}
             
         </div>
