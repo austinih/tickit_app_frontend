@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import '../styles/venueDetails.css'
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function VenueDetails() {
     
@@ -19,6 +20,8 @@ export default function VenueDetails() {
         };
         renderVenue();
     }, [venueId]);
+
+    
     if (!venue) {
         return <h1>Loading, please wait</h1>;}
     return (
@@ -35,7 +38,10 @@ export default function VenueDetails() {
                         <h2 className="event-name">{event.title}</h2>
                         <h2 >{event.price}</h2>
                         <h2 >{event.genre}</h2>
-
+                        <Link to={`/tickets/${event.id}`} key={events.id}><button>Tickets
+                            </button>
+                            </Link>
+                        
                     </div>
                 )): 
                 <h2>No events found</h2>

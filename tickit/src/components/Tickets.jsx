@@ -3,17 +3,17 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import '../styles/tickets.css'
 import Confirmation from './Confirmation'
-
+import { useParams } from "react-router-dom";
 
 
 
 export default function Tickets() {
  
-
+  const {eventId} = useParams()
   const [concertData, setConcertData] = useState({})
   const [createForm, setCreateForm] = useState([])
   const [formValues, setFormValues] = useState({
-    event_id: '1',
+    event_id: `${eventId}`,
     name: '',
     email: '',
     phone_number: '',
@@ -37,8 +37,7 @@ export default function Tickets() {
   }
 
   const ConfirmInfo = async () => {
-    const response = await axios.get(`http://localhost:8000/venues`)
-    console.log(response.data, "line 42")
+    const response = await axios.get(`http://localhost:8000/events/${eventId}`)
     setConcertData(response.data)
     console.log(response.data, "line 44")
 }
@@ -49,7 +48,7 @@ useEffect(() => {
  
 
 
-return concertData[0] ? (
+return concertData ? (
   
   <div className= "venue-info">
     <h1>Tickets Page</h1>
@@ -57,23 +56,18 @@ return concertData[0] ? (
             <p key={venue.id}>Thanks for your interest in the concert at {venue.name}</p>
         ))} */}
         <div className='details-container'>
-      <h1>Concert Details:</h1>
-      <p>
-        📍 Thanks for your interest in the concert at {concertData[0].name}
-      </p>
-      <p>located at {concertData[0].address}</p>
       </div>
       <div className='details-container'>
       <h1>Event Details:</h1>
       <p>
-        🎸 The Concert you've chosen: {concertData[0].events[0].artist} on the{' '}
-        {concertData[0].events[0].title}
+        🎸 The Concert you've chosen: {concertData.artist} on the{' '}
+        {concertData.title}
       </p>
       </div>
       <div className='details-container'>
       <h1>Pricing:</h1>
       <p>
-        💵 Each ticket to this event will cost {concertData[0].events[0].price}
+        💵 Each ticket to this event will cost {concertData.price}
       </p>
       </div>
       <p>Please confirm this information before purchasing your tickets below.</p>
@@ -158,12 +152,12 @@ return concertData[0] ? (
         </form>
         {createForm && (
           <div>
-            <h2>{createForm.event}</h2>
             <p>{createForm.name}</p>
             <p>{createForm.email}</p>
             <p>{createForm.phone_number}</p>
             <p>{createForm.seat_number}</p>
             <p>{createForm.credit_card_number}</p>
+            <p>{createForm.event_id}</p>
           </div>
         )}
       </div>

@@ -28,8 +28,8 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/venues" element={<Venues />} />
             <Route path="/venues/:venueId" element={<VenueDetails/>} />
-            <Route path="/tickets/" element={<Tickets />} />
-            {/* Add back :eventId after testing^ */}
+            <Route path="/tickets/:eventId" element={<Tickets />} />
+            
             <Route path="/confirmation/" element={<Confirmation />} />
             {/* Add back :eventId after testing^ */}
 
