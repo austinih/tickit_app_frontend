@@ -2,6 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 5rem;
+    margin-left: auto;
 }
     
 .event-card {
@@ -33,17 +35,56 @@
     font-size: 14px;
     backdrop-filter: blur(7px);
     margin-top: 11rem;
-    width: 100%
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .event-artist {
+    margin-left: 1rem;
+  }
+  
+  .event-date {
+    margin-right: 1rem;
   }
 .event-card:hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
     transform: scale(1.1)
     
 }
 
+.event-card:not(:hover) {
+    transform: scale(1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
 
 
+.search-box {
+    margin-right: 8rem;
+    
+}
+
+.search-btn {
+    background-color: rgb(16, 16, 209);
+    color: white;
+    border-radius: 3px;
+    border: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+.search-btn:hover {
+background-color: darkblue;
+}
+  
 
 .main-link{
     text-decoration: none;
+
 }
+
+
+
+
