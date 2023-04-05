@@ -42,6 +42,10 @@ export default function Tickets() {
     ConfirmInfo();
   }, [])
   
+  useEffect(() => {
+    ConfirmInfo();
+  }, [])
+   
 return concertData ? (
   
   <div>
@@ -51,6 +55,7 @@ return concertData ? (
           <h1>Event Details:</h1>
           <p className="event-details">🎸 The Concert you've chosen:</p> 
             <p>{concertData.artist}'s: {concertData.title}</p>
+            console.log(concertData.artist)
         </div>
         <div className='event-price-container'>
           <h1>Pricing:</h1>
