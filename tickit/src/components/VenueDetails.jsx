@@ -21,7 +21,8 @@ export default function VenueDetails() {
         renderVenue();
     }, [venueId]);
 
-    
+    // change
+
     if (!venue) {
         return <h1>Loading, please wait</h1>;}
     return (

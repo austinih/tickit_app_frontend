@@ -54,7 +54,7 @@ export default function Main() {
           value={search.formInput}
           onChange={handleChange}
         />
-        <button className="search-btn" type="button" onClick={handleSubmit}>
+        <button type="button" onClick={handleSubmit}>
           Search
         </button>
       </div>
@@ -68,7 +68,6 @@ export default function Main() {
           style={{ backgroundImage: `url('${event.image_url}')` }}>
           <div className="img-caption-one">
           <p className="event-artist">{event.artist}</p>
-          <p>|</p>
           <p className="event-date">{event.date}</p>
           </div>
         </div>
