@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import '../styles/main.css';
+import "../styles/main.css";
 import { Link } from "react-router-dom";
 
 export default function Main() {
@@ -36,7 +36,7 @@ export default function Main() {
 
   const filteredEvents = search.isSubmitted
     ? events.filter((event) =>
-        event.title.toLowerCase().includes(search.formInput.toLowerCase())
+        event.artist.toLowerCase().includes(search.formInput.toLowerCase())
       )
     : events;
 
@@ -58,24 +58,27 @@ export default function Main() {
           Search
         </button>
       </div>
-    <div className="event-list">
-      
-      {filteredEvents.map((event) => (
-        <Link className="main-link" to={`/tickets/${event.id}`} key={events.id}>
-        <div
-          key={event.id}
-          className="event-card"
-          style={{ backgroundImage: `url('${event.image_url}')` }}>
-          <div className="img-caption-one">
-          <p className="event-artist">{event.artist}</p>
-          <p>|</p>
-          <p className="event-date">{event.date}</p>
-          </div>
-        </div>
-        </Link>
-      ))}
-      
-    </div>
+      <div className="event-list">
+        {filteredEvents.map((event) => (
+          <Link
+            className="main-link"
+            to={`/tickets/${event.id}`}
+            key={events.id}
+          >
+            <div
+              key={event.id}
+              className="event-card"
+              style={{ backgroundImage: `url('${event.image_url}')` }}
+            >
+              <div className="img-caption-one">
+                <p className="event-artist">{event.artist}</p>
+                <p>|</p>
+                <p className="event-date">{event.date}</p>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
