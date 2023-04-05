@@ -66,7 +66,7 @@ export default function Main() {
           key={event.id}
           className="event-card"
           style={{ backgroundImage: `url('${event.image_url}')` }}>
-          <div className="img-caption">
+          <div className="img-caption-one">
           <p className="event-artist">{event.artist}</p>
           <p className="event-date">{event.date}</p>
           </div>

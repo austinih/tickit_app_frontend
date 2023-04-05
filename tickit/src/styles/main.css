@@ -21,19 +21,20 @@
 }
 
 .img-caption-one {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border-radius: 5px;
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
-  font-size: 14px;
-  backdrop-filter: blur(7px);
-  margin-top: 11rem;
-  width: 100%
-}
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 5px;
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+    backdrop-filter: blur(7px);
+    margin-top: 11rem;
+    width: 100%
+  }
+
 .event-card:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform: scale(1.1)

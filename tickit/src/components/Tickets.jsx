@@ -51,22 +51,16 @@ useEffect(() => {
 return concertData ? (
   
   <div className= "venue-info">
-    <h1>Tickets Page</h1>
-    {/* {concertData.map(venue => (
-            <p key={venue.id}>Thanks for your interest in the concert at {venue.name}</p>
-        ))} */}
-        <div className='details-container'>
-      </div>
-      <div className='details-container'>
+    <div className='event-details-container'>
       <h1>Event Details:</h1>
-      <p>
-        🎸 The Concert you've chosen: {concertData.artist} on the{' '}
+      <p className="event-details">
+        🎸 The Concert you've chosen: {concertData.artist} on the
         {concertData.title}
       </p>
       </div>
-      <div className='details-container'>
+      <div className='event-price-container'>
       <h1>Pricing:</h1>
-      <p>
+      <p className="event-price">
         💵 Each ticket to this event will cost {concertData.price}
       </p>
       </div>
@@ -152,12 +146,12 @@ return concertData ? (
         </form>
         {createForm && (
           <div>
-            <p>{createForm.name}</p>
+            {/* <p>{createForm.name}</p>
             <p>{createForm.email}</p>
             <p>{createForm.phone_number}</p>
             <p>{createForm.seat_number}</p>
             <p>{createForm.credit_card_number}</p>
-            <p>{createForm.event_id}</p>
+            <p>{createForm.event_id}</p> */}
           </div>
         )}
       </div>
