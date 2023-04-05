@@ -42,11 +42,7 @@ export default function Tickets() {
     ConfirmInfo();
   }, [])
   
-  useEffect(() => {
-    ConfirmInfo();
-  }, [])
-   
-return concertData ? (
+  return concertData ? (
   
   <div>
     <div className='info-container'>
