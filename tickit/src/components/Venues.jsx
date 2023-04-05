@@ -34,8 +34,8 @@ export default function Venues() {
                 <Link to={`/venues/${venue.id}`} key={venue.id}>
                     <div className="venue-card" style={{backgroundImage:`url('${venue.image_url}')` }} >
                         <div className="img-caption">
-                        <h2>{venue.name}</h2> 
-                        <p>{venue.address}</p>    
+                        <h2 className="title-venue-one">{venue.name}</h2> 
+                        <p className="address-venue-one">{venue.address}</p>    
                         </div>                  
                     </div>
                 </Link>

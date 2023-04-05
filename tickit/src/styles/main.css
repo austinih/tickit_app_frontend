@@ -40,12 +40,18 @@
   justify-content: space-between;
 }
 
-.event-artist {
+.event-artist-main {
   margin-left: 1rem;
+  font-size: 20px;
 }
 
-.event-date {
+.bar {
+  font-size: 20px;
+}
+
+.event-date-main {
   margin-right: 1rem;
+  font-size: 20px;
 }
 .event-card:hover {
   transition: transform 0.4s ease, box-shadow 0.3s ease;
