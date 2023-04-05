@@ -1,52 +1,42 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 // import { useNavigate } from 'react-router-dom';
-import axios from 'axios'
-import '../styles/tickets.css'
-import Confirmation from './Confirmation'
+import axios from "axios";
+import "../styles/tickets.css";
+import Confirmation from "./Confirmation";
 import { useParams } from "react-router-dom";
 
-
-
 export default function Tickets() {
- 
-  const {eventId} = useParams()
-  const [concertData, setConcertData] = useState({})
-  const [createForm, setCreateForm] = useState([])
+  const { eventId } = useParams();
+  const [concertData, setConcertData] = useState({});
+  const [createForm, setCreateForm] = useState([]);
   const [formValues, setFormValues] = useState({
     event_id: `${eventId}`,
-    name: '',
-    email: '',
-    phone_number: '',
-    seat_number: '',
-    credit_card_number: '',
-    
-    
-  })
-
+    name: "",
+    email: "",
+    phone_number: "",
+    seat_number: "",
+    credit_card_number: "",
+  });
 
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
-
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    const response = await axios.post(`http://localhost:8000/create-ticket-detail/`, formValues)
-    console.log(response.data)
-    setCreateForm(response.data)
-  }
+    e.preventDefault();
+    const response = await axios.post(
+      `http://localhost:8000/create-ticket-detail/`,
+      formValues
+    );
+    console.log(response.data);
+    setCreateForm(response.data);
+  };
 
   const ConfirmInfo = async () => {
-    const response = await axios.get(`http://localhost:8000/events/${eventId}`)
-    setConcertData(response.data)
-    console.log(response.data, "line 44")
-}
-
-useEffect(() => {
-  ConfirmInfo();
-}, [])
- 
-
+    const response = await axios.get(`http://localhost:8000/events/${eventId}`);
+    setConcertData(response.data);
+    console.log(response.data, "line 44");
+  };
 
 return concertData ? (
   
@@ -161,11 +151,3 @@ return concertData ? (
 ) : <h1> Loading, please wait</h1>
 
 }
-
-
-
-
-
-
-
-
