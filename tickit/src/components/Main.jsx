@@ -36,7 +36,7 @@ export default function Main() {
 
   const filteredEvents = search.isSubmitted
     ? events.filter((event) =>
-        event.title.toLowerCase().includes(search.formInput.toLowerCase())
+        event.artist.toLowerCase().includes(search.formInput.toLowerCase())
       )
     : events;
 
