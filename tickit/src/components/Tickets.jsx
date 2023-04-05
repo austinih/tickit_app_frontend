@@ -38,6 +38,10 @@ export default function Tickets() {
     console.log(response.data, "line 44");
   };
 
+  useEffect(() => {
+    ConfirmInfo();
+  }, [])
+  
 return concertData ? (
   
   <div>
