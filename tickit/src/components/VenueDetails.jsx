@@ -34,7 +34,7 @@ export default function VenueDetails() {
                 </div>
                 <img className="venue-image" src={venue.image_url} alt='Venue Image' />
             </div>     
-            <div className="event-list">
+            <div className="event-list-one">
                 {venue.events ? venue.events.map((event) => (
                         
                     <div className="events-card">
