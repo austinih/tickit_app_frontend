@@ -30,7 +30,7 @@ export default function VenueDetails() {
             <div className="venue-header">
                 <div className="venue-info">
                     <h1>Upcoming Events at {venue.name} </h1>
-                    <h3>{venue.address}</h3>
+                    <h4>{venue.address}</h4>
                 </div>
                 <img className="venue-image" src={venue.image_url} alt='Venue Image' />
             </div>     
