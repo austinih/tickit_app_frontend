@@ -1,21 +1,47 @@
-.form-container {
+.details-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 60vh;
+  margin-bottom: 1rem;
+  text-align: center;
 }
+
+.event-details-container,
+.event-price-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.event-details,
+.event-price {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-basis: 50%;
+}
+
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-wrap: wrap;
 }
 
 .card {
-  background-color: #0077c2;
+  background-color: #0358C8;
   border-radius: 10px;
   padding: 50px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 1rem;
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  display: inline-block;
 }
 
 .label {
@@ -33,34 +59,20 @@
 
 .submit-btn {
   background-color: #ffffff;
-  color: #0077c2;
+  color: #0358C8;
   border: none;
   border-radius: 4px;
   padding: 10px;
   cursor: pointer;
 }
+
 .input-wrapper {
-  margin-right: 15px; 
+  margin-right: 15px;
+  flex-basis: 50%;
 }
 
-p {
-  margin: 0.5rem 0;
-  line-height: 1.5;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
 
-.venue-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.details-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
+
+
+
