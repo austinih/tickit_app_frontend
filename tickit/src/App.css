@@ -9,9 +9,8 @@
 main {
         background-color: var(--md-sys-color-background);
         color: var(--md-sys-color-on-background);
-        padding: 4rem;
+        padding: 3rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 4rem;
 }

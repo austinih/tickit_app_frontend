@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
   margin-left: auto;
 }
   
@@ -63,12 +63,6 @@
   transform: scale(1);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-}
-
-
-.search-box {
-  margin-right: 8rem;
-  
 }
 
 .search-btn {
