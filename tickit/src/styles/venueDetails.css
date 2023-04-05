@@ -1,0 +1,62 @@
+.venue-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 3rem 2rem 3rem;
+    margin-top: -2rem;
+}
+.venue-info {
+    display: block;
+    /* margin-left: -1rem; */
+    text-align: left;
+}
+.venue-image {
+    width: 20%;
+    /* height: 15%; */
+    object-fit: cover;
+    border-radius: 1rem;
+    /* margin-right: -1rem; */
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.events-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 1rem;
+}
+.details-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75vw;
+    padding: 10px;
+    border-radius: 10px;
+}
+.details-box:hover {
+    background-color: var(--md-sys-color-primary-container);
+}
+.event-date {
+    color: #904DBA;
+}
+.event-artist {
+    color: var(--md-sys-color-outline);
+    font-weight: normal;    
+}
+.ticket-button {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    
+}

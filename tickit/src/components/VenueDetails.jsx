@@ -27,20 +27,28 @@ export default function VenueDetails() {
         return <h1>Loading, please wait</h1>;}
     return (
         <div>
-                
-            <img className="venue-image" src={venue.image_url} alt='Venue Image' style={{width: '500px'}}/>
-            <h1>Upcoming Events at {venue.name} </h1> 
+            <div className="venue-header">
+                <div className="venue-info">
+                    <h1>Upcoming Events at {venue.name} </h1>
+                    <h3>{venue.address}</h3>
+                </div>
+                <img className="venue-image" src={venue.image_url} alt='Venue Image' />
+            </div>     
             <div className="event-list">
                 {venue.events ? venue.events.map((event) => (
                         
                     <div className="events-card">
-                        <h2 >{event.date}</h2>
-                        <h2 >{event.artist}</h2>
-                        <h2 className="event-name">{event.title}</h2>
-                        <h2 >{event.price}</h2>
-                        <h2 >{event.genre}</h2>
-                        <Link to={`/tickets/${event.id}`} key={events.id}><button>Tickets
-                            </button>
+                        <div className="details-box" id="details">
+                            <h3 className="event-date"style={{width:'15vw'}}>{event.date}</h3>
+                            <div style={{width:'30vw'}}>
+                                <h3 >{event.title}</h3>
+                                <h3 className="event-artist">{event.artist}</h3>
+                            </div>
+                            {/* <h2 >{event.price}</h2> */}
+                            <h5 style={{width:'20vw'}}>{event.genre}</h5>
+                        </div>
+                            <Link to={`/tickets/${event.id}`} key={events.id} ><button className="ticket-button">See Tickets
+                                </button>
                             </Link>
                         
                     </div>
