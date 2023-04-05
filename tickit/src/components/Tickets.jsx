@@ -38,33 +38,29 @@ export default function Tickets() {
     console.log(response.data, "line 44");
   };
 
-  useEffect(() => {
-    ConfirmInfo();
-  }, []);
-
-  return concertData ? (
-    <div className="venue-info">
-      <div className="event-details-container">
-        <h1>Event Details:</h1>
-        <p className="event-details">
-          🎸 The Concert you've chosen: {concertData.artist} on the
-          {concertData.title}
-        </p>
+return concertData ? (
+  
+  <div>
+    <div className='info-container'>
+      <div className='event-display'>
+        <div className='event-details-container'>
+          <h1>Event Details:</h1>
+          <p className="event-details">🎸 The Concert you've chosen:</p> 
+            <p>{concertData.artist}'s: {concertData.title}</p>
+        </div>
+        <div className='event-price-container'>
+          <h1>Pricing:</h1>
+          <p className="event-price"> 💵 Each ticket to this event will cost: </p>
+          <p> ${concertData.price}</p>
+        </div>
       </div>
-      <div className="event-price-container">
-        <h1>Pricing:</h1>
-        <p className="event-price">
-          💵 Each ticket to this event will cost {concertData.price}
-        </p>
-      </div>
-      <p>
-        Please confirm this information before purchasing your tickets below.
-      </p>
-
+      <p>Please confirm this information before purchasing your tickets below:</p>
+    </div> 
       <div className="form-container">
         <div className="card">
           <form className="form" onSubmit={handleSubmit}>
-            <div className="input-wrapper"></div>
+            <div className="input-wrapper">
+            </div>
             <div className="input-wrapper">
               <label className="label" htmlFor="name">
                 Name
@@ -136,21 +132,22 @@ export default function Tickets() {
               />
             </div>
             <Confirmation />
+            
           </form>
           {createForm && (
             <div>
               {/* <p>{createForm.name}</p>
-            <p>{createForm.email}</p>
-            <p>{createForm.phone_number}</p>
-            <p>{createForm.seat_number}</p>
-            <p>{createForm.credit_card_number}</p>
-            <p>{createForm.event_id}</p> */}
+              <p>{createForm.email}</p>
+              <p>{createForm.phone_number}</p>
+              <p>{createForm.seat_number}</p>
+              <p>{createForm.credit_card_number}</p>
+              <p>{createForm.event_id}</p> */}
             </div>
           )}
         </div>
       </div>
-    </div>
-  ) : (
-    <h1> Loading, please wait</h1>
-  );
+    
+  </div>
+) : <h1> Loading, please wait</h1>
+
 }
