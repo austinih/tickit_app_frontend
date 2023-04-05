@@ -5,10 +5,10 @@ export default function Footer() {
         <div className="footer-container">
             <h3 className="footer-title">Tickit</h3>
             <div className="links-container">
-            <p>Contact Us</p>
-            <p>Customer Support</p>
-            <p>Jobs</p>
-            <p>Legal</p>
+            <p className='footer-links'>Contact Us</p>
+            <p className='footer-links'>Customer Support</p>
+            <p className='footer-links'>Jobs</p>
+            <p className='footer-links'>Legal</p>
             </div>
             <form className="newsletter-form">
             <div className="newsletter-input-container">
