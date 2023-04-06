@@ -41,24 +41,24 @@ export default function Tickets() {
   useEffect(() => {
     ConfirmInfo();
   }, [])
-  
-return concertData ? (
+
+  return concertData ? (
   
   <div>
     <div className='info-container'>
       <div className='event-display'>
         <div className='event-details-container'>
           <h1>Event Details:</h1>
-          <p className="event-details">🎸 The Concert you've chosen:</p> 
-            <p>{concertData.artist}'s: {concertData.title}</p>
+          <p className="event-details-header">🎸 The Concert you've chosen:</p> 
+          <p className="event-details">{concertData.artist}'s: {concertData.title}</p>
         </div>
         <div className='event-price-container'>
           <h1>Pricing:</h1>
-          <p className="event-price"> 💵 Each ticket to this event will cost: </p>
-          <p> ${concertData.price}</p>
+          <p className="event-price-header"> 💵 Each ticket to this event will cost: </p>
+          <p className="event-price"> ${concertData.price}</p>
         </div>
       </div>
-      <p>Please confirm this information before purchasing your tickets below:</p>
+      <p style={{fontSize:'1.3rem'}}>Please confirm this information before purchasing your tickets below:</p>
     </div> 
       <div className="form-container">
         <div className="card">

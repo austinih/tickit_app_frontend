@@ -29,7 +29,9 @@ export default function VenueDetails() {
         <div>
             <div className="venue-header">
                 <div className="venue-info">
-                    <h1 className="venue-details-title">Upcoming Events at {venue.name} </h1>
+                    <h1 className="venue-details-title">Upcoming Events at  </h1>
+                    <break></break>
+                    <h1 className="venue-details-title" style={{textDecoration: "underline"}}>{venue.name}</h1>
                     <p className="venue-address">{venue.address}</p>
                 </div>
                 <img className="venue-image" src={venue.image_url} alt='Venue Image' />

@@ -33,7 +33,8 @@
     font-size: 12px;
     backdrop-filter: blur(7px);
     margin-top: 12rem;
-    width: 100%
+    width: 100%;
+    padding-left:1rem;
   }
 .venue-card:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -48,5 +49,6 @@
   }
 
 .title-venue-one{
-    font-size: 25px
+    font-size: 25px;
+
 }

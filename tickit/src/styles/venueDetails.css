@@ -4,13 +4,16 @@
     justify-content: space-around;
     align-items: center;
     padding: 0 3rem 2rem 3rem;
-    margin-top: -2rem;
+    margin-top: -1rem;
+    
 }
 .venue-info {
-    padding-right: 4rem;
-    display: block;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
     /* margin-left: -1rem; */
     text-align: left;
+    border-left: 3px solid var(--md-sys-color-primary) ;
 }
 .venue-image {
     width: 20%;
