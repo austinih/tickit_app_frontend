@@ -20,7 +20,7 @@ Welcome to the Tick-iT Demo! Tick-iT is a concert search and booking app for the
 <details>
     <summary>Socials</summary>
 
-- [Github(](https://github.com/bojeebs)
+- [Github](https://github.com/bojeebs)
 - [LinkedIn](https://www.linkedin.com/in/carter-tyler/)
 
 </details>
