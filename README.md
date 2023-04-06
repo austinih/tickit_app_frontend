@@ -51,12 +51,12 @@ Welcome to the Tick-iT Demo! Tick-iT is a concert search and booking app for the
 - Implement Auth to allow users to create accounts and log in - in progress
 
 ## Component Hierarchy
-![Tick-it Component Hierarchy](https://www.figma.com/file/jP6HhuGUxkJbOPSy7MdPPT/Tick-it?node-id=0-1&t=DLOIyTkYkJ26hn7d-0)
+- [Tick-it Component Hierarchy](https://www.figma.com/file/jP6HhuGUxkJbOPSy7MdPPT/Tick-it?node-id=0-1&t=DLOIyTkYkJ26hn7d-0)
 
 ## Low Fidelity Wireframes
-![Low Fidelity Wireframes](https://www.figma.com/file/XCTGL7lXleDeyuwedf9lOt/Tick-It?node-id=0-1&t=RZa1HronwBGozD30-0)
+- [Low Fidelity Wireframes](https://www.figma.com/file/XCTGL7lXleDeyuwedf9lOt/Tick-It?node-id=0-1&t=RZa1HronwBGozD30-0)
 
 ## Links
-![Backend Repo Link](https://github.com/austinih/tickit_app_backend)
-![Project Trello Board](https://trello.com/b/czYkOXUP/tick-it)
+- [Backend Repo Link](https://github.com/austinih/tickit_app_backend)
+- [Project Trello Board](https://trello.com/b/czYkOXUP/tick-it)
 
