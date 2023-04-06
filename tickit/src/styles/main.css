@@ -66,7 +66,7 @@
 }
 
 .search-btn {
-  background-color: rgb(16, 16, 209);
+  background-color: var(--md-sys-color-primary);
   color: white;
   border-radius: 3px;
   border: none;
@@ -76,7 +76,7 @@
 }
 
 .search-btn:hover {
-background-color: darkblue;
+background-color: var(--md-sys-color-on-primary-container);
 }
 
 
