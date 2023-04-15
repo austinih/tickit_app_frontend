@@ -1,5 +1,14 @@
 # tickit_app_frontend
 
+![](https://i.imgur.com/jaCaiZV.jpg)
+
+![Plants](https://i.imgur.com/c17TRTX.png)
+
+![Plant Info](https://i.imgur.com/Op2flNp.png)
+
+![Layout](https://i.imgur.com/cK9hx9s.png)
+
+
 # Tick-iT
 Welcome to the Tick-iT Demo! Tick-iT is a concert search and booking app for the Denver, CO area. This project was built using React.js on the front end and Django for our backend API. 
 
